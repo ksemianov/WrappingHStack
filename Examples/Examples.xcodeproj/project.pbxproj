@@ -11,7 +11,7 @@
 		4836B22629399DCD0054A196 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4836B22529399DCD0054A196 /* ContentView.swift */; };
 		4836B22829399DCE0054A196 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4836B22729399DCE0054A196 /* Assets.xcassets */; };
 		4836B22C29399DCE0054A196 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4836B22B29399DCE0054A196 /* Preview Assets.xcassets */; };
-		48FC27CA29399EAE0035349A /* WrappingHStack in Frameworks */ = {isa = PBXBuildFile; productRef = 48FC27C929399EAE0035349A /* WrappingHStack */; };
+		484393332942E5020036119C /* WrappingHStack in Frameworks */ = {isa = PBXBuildFile; productRef = 484393322942E5020036119C /* WrappingHStack */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,7 +21,7 @@
 		4836B22729399DCE0054A196 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4836B22929399DCE0054A196 /* Examples.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Examples.entitlements; sourceTree = "<group>"; };
 		4836B22B29399DCE0054A196 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		4836B23229399DE60054A196 /* WrappingHStack */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = WrappingHStack; path = ../../..; sourceTree = "<group>"; };
+		484393312942E4CD0036119C /* WrappingHStack */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = WrappingHStack; path = ..; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,7 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48FC27CA29399EAE0035349A /* WrappingHStack in Frameworks */,
+				484393332942E5020036119C /* WrappingHStack in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +42,7 @@
 				4836B22229399DCD0054A196 /* Examples */,
 				4836B22129399DCD0054A196 /* Products */,
 				48FC27C829399EAE0035349A /* Frameworks */,
+				484393302942E4CD0036119C /* Packages */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,10 +69,17 @@
 		4836B22A29399DCE0054A196 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				4836B23229399DE60054A196 /* WrappingHStack */,
 				4836B22B29399DCE0054A196 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		484393302942E4CD0036119C /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				484393312942E4CD0036119C /* WrappingHStack */,
+			);
+			name = Packages;
 			sourceTree = "<group>";
 		};
 		48FC27C829399EAE0035349A /* Frameworks */ = {
@@ -98,7 +106,7 @@
 			);
 			name = Examples;
 			packageProductDependencies = (
-				48FC27C929399EAE0035349A /* WrappingHStack */,
+				484393322942E5020036119C /* WrappingHStack */,
 			);
 			productName = Examples;
 			productReference = 4836B22029399DCD0054A196 /* Examples.app */;
@@ -371,7 +379,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		48FC27C929399EAE0035349A /* WrappingHStack */ = {
+		484393322942E5020036119C /* WrappingHStack */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = WrappingHStack;
 		};

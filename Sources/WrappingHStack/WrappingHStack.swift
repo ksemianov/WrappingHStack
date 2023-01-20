@@ -201,7 +201,7 @@ extension WrappingHStack {
     private func verticalSpacing(_ lhs: LayoutSubview, _ rhs: LayoutSubview) -> CGFloat {
         if let verticalSpacing { return verticalSpacing }
 
-        return lhs.spacing.distance(to: rhs.spacing, along: .horizontal)
+        return lhs.spacing.distance(to: rhs.spacing, along: .vertical)
     }
 }
 

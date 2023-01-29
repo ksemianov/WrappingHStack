@@ -62,6 +62,13 @@ dependencies: [
 ]
 ```
 
+If you want to use WrappingHStack in a [CocoaPods](https://cocoapods.org) project,
+add this line to your `Podfile`:
+
+``` ruby
+'WrappingHStackLayout', '~> 0.1.2'
+```
+
 ## License
 
 This library is released under the MIT license. See [LICENSE](LICENSE) for details.

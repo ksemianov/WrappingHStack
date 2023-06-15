@@ -106,6 +106,10 @@ extension WrappingHStack {
     private func arrangeRows(proposal: ProposedViewSize,
                              subviews: Subviews,
                              cache: inout Cache) -> [Row] {
+        if subviews.isEmpty {
+            return []
+        }
+
         if cache.minSize.width > proposal.width ?? .infinity,
            cache.minSize.height > proposal.height ?? .infinity {
             return []
@@ -144,8 +148,10 @@ extension WrappingHStack {
             currentX += size.width + spacing
         }
 
-        currentRow.width = currentX
-        rows.append(currentRow)
+        if !currentRow.elements.isEmpty {
+            currentRow.width = currentX
+            rows.append(currentRow)
+        }
 
         var currentY = CGFloat.zero
         var previousMaxHeightIndex: Int?

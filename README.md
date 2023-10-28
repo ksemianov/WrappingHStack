@@ -18,12 +18,15 @@ The component's signature:
 ``` swift
 WrappingHStack(alignment: Alignment = .center,
                horizontalSpacing: CGFloat? = nil,
-               verticalSpacing: CGFloat? = nil)
+               verticalSpacing: CGFloat? = nil,
+               fitContentWidth: Bool = false)
 ```
 
-The component by default uses the `.center` alignment, but also supports the following alignment values: `.center`, `.leading`, `.topLeading`, `.top`, `.topTrailing`, `.trailing`, `.bottomTrailing`, `.bottom`, `.bottomLeading`. The rest are treated as `.center`.
+The component, by default, uses the `.center` alignment, but also supports the following alignment values: `.center`, `.leading`, `.topLeading`, `.top`, `.topTrailing`, `.trailing`, `.bottomTrailing`, `.bottom`, `.bottomLeading`. The rest are treated as `.center`.
 
-The component by default uses system the provided spacing, but it's also possible to specify explicit `horizontalSpacing` and `verticalSpacing`.
+The component, by default, uses the system provided spacing, but it's also possible to specify explicit `horizontalSpacing` and `verticalSpacing`.
+
+The component, by default, spans the entire available width. However, you can set `fitContentWidth` to `true` to make it adjust its width based on its content.
 
 The component assumes that the largest subview fits into the bounds and there are no infinitely growing subviews. The component assumes that it can grow vertically as much as necessary to fit into the width constraint.
 
@@ -58,7 +61,7 @@ it's as simple as adding it to a `dependencies` clause in your `Package.swift`:
 
 ``` swift
 dependencies: [
-    .package(url: "https://github.com/ksemianov/WrappingHStack", from: "0.1.0")
+    .package(url: "https://github.com/ksemianov/WrappingHStack", from: "0.2.0")
 ]
 ```
 
@@ -66,7 +69,7 @@ If you want to use WrappingHStack in a [CocoaPods](https://cocoapods.org) projec
 add this line to your `Podfile`:
 
 ``` ruby
-'WrappingHStackLayout', '~> 0.1.2'
+'WrappingHStackLayout', '~> 0.2.0'
 ```
 
 ## License

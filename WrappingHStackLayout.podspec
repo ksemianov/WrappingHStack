@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name                  = 'WrappingHStackLayout'
-  s.version               = '0.1.3'
+  s.version               = '0.2.0'
   s.summary               = 'WrappingHStack (FlowLayout) is a SwiftUI component similar to HStack that wraps horizontally overflowing subviews onto the next lines.'
   s.homepage              = 'https://github.com/ksemianov/WrappingHStack'
   s.authors               = 'Konstantin Semianov <ksemianov>'

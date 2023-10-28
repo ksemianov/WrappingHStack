@@ -18,19 +18,28 @@ public struct WrappingHStack: Layout {
     /// The distance between consequtive rows or`nil` if you want the stack to choose a default distance.
     public var verticalSpacing: CGFloat?
 
+    /// Determines if the width of the stack should adjust to fit its content.
+    ///
+    /// If set to `true`, the stack's width will be based on its content rather than filling the available width.
+    /// If set to `false` (default), it will occupy the full available width.
+    public var fitContentWidth: Bool
+
     /// Creates a wrapping horizontal stack with the given spacings and alignment.
     ///
     /// - Parameters:
     ///   - alignment: The guide for aligning the subviews in this stack. This guide has the same screen coordinate for every subview.
     ///   - horizontalSpacing: The distance between adjacent subviews in a row or `nil` if you want the stack to choose a default distance.
     ///   - verticalSpacing: The distance between consequtive rows or`nil` if you want the stack to choose a default distance.
+    ///   - fitContentWidth: Determines if the width of the stack should adjust to fit its content.
     ///   - content: A view builder that creates the content of this stack.
     @inlinable public init(alignment: Alignment = .center,
                            horizontalSpacing: CGFloat? = nil,
-                           verticalSpacing: CGFloat? = nil) {
+                           verticalSpacing: CGFloat? = nil,
+                           fitContentWidth: Bool = false) {
         self.alignment = alignment
         self.horizontalSpacing = horizontalSpacing
         self.verticalSpacing = verticalSpacing
+        self.fitContentWidth = fitContentWidth
     }
 
     public static var layoutProperties: LayoutProperties {
@@ -65,7 +74,11 @@ public struct WrappingHStack: Layout {
 
         if rows.isEmpty { return cache.minSize }
 
-        let width = proposal.width ?? rows.map { $0.width }.reduce(.zero) { max($0, $1) }
+        var width: CGFloat = rows.map { $0.width }.reduce(.zero) { max($0, $1) }
+
+        if !fitContentWidth, let proposalWidth = proposal.width {
+            width = max(width, proposalWidth)
+        }
 
         var height: CGFloat = .zero
         if let lastRow = rows.last {
